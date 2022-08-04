@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD in NodeJS</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
+    <div id="titulo">
+        <h1>Candidatos</h1>
+    </div>
+    <section id="table">
     <h2>Editar Registro</h2>
     <% data.forEach(function(details) { %>
         <form action="/edit/<%= details._id %>" method="POST">
-            <input type="text" value="<%= details.name %>" name="name">
-            <input type="text" value="<%= details.surname %>" name="surname">
+            <input class="input-text" type="text" value="<%= details.name %>" name="name">
+            <input class="input-text" type="text" value="<%= details.surname %>" name="surname">
             <br />
-            <button><a href="/show">Todos</a></button>
-            <button type="submit">Editar</button>
+            <button class="input-btn"><a href="/show">Todos</a></button>
+            <button class="input-btn" type="submit">Editar</button>
         </form>
     <% }) %>
+    </section>
 </body>
 </html>

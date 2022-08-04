@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD in NodeJS</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
+    <div id="titulo">
+        <h1>Candidatos</h1>
+    </div>
+    <section id="table">
     <h2>Registrar</h2>
+    <div id="input-form">
     <form action="/show" method="POST">
-        <input type="text" placeholder="Nome" name="name">
-        <input type="text" placeholder="Sobrenome" name="surname">
-        <button type="submit">Submit</button>
+        <input class="input-text" type="text" placeholder="Nome" name="name">
+        <input class="input-text" type="text" placeholder="Sobrenome" name="surname">
+        <button class="input-btn" type="submit">Submit</button>
     </form>
+    </div>
+    </section>
 </body>
 </html>
