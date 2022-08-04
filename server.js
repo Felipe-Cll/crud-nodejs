@@ -1,10 +1,10 @@
 const express = require('express')
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser')
 const app = express()
 
 const ObjectId = require('mongodb').ObjectId
 const MongoClient = require('mongodb').MongoClient
-const uri = "mongodb+srv://Felipe:password@crud-nodejs.l0rwo.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://Felipe:12345lipejs@crud-nodejs.l0rwo.mongodb.net/?retryWrites=true&w=majority";
 
 app.use(bodyParser.urlencoded({extended: true}))
 
@@ -19,27 +19,26 @@ MongoClient.connect(uri, (err, client) => {
 
 app.set('view engine', 'ejs')
 
-app.get('/', (req, res) => {
+app.route('/')
+.get(function(req, res) {
+    const cursor = db.collection('data').find()
     res.render('index.ejs')
 })
 
-app.get('/', (req, res) => {
-    var cursor = db.collection('data').find()
-})
-
-app.get('/show', (req, res) => {
-    db.collection('data').find().toArray((err, results) => {
+.post((req, res) => {
+    db.collection('data').save(req.body, (err, result) => {
         if (err) return console.log(err)
-        res.render('show.ejs', {data: results})
+
+        console.log('Salvo no banco de dados')
+        res.redirect('/show')
     })
 })
 
-app.post('/show', (req, res) => {
-    db.collection('data').insertOne(req.body, (err, result) => {
+app.route('/show')
+.get((req, res) => {
+    db.collection('data').find().toArray((err, results) => {
         if (err) return console.log(err)
-
-        console.log('salvo no banco de dados')
-        res.redirect('/show')
+        res.render('show.ejs', {data: results})
     })
 })
 
@@ -47,7 +46,7 @@ app.route('/edit/:id')
 .get((req, res) => {
     var id = req.params.id
 
-    db.collection('data').find(Object(id)).toArray((err, result) => {
+    db.collection('data').find(ObjectId(id)).toArray((err, result) => {
         if (err) return res.send(err)
         res.render('edit.ejs', {data: result})
     })
