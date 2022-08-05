@@ -5,13 +5,14 @@ body {
 }
 
 #titulo {
-    background-color: aqua;
+    background-color: #3498DB;
     display: table;
     width: 100%;
     height: 100%;
     text-align: center;
     font-size: 2em;
     line-height: 10vh;
+    color: #fff;
 }
 
 h1 {
@@ -38,16 +39,32 @@ h2 {
     border-color: #262626;
 }
 
+table {
+    border-collapse: collapse;
+}
+
 .input-text {
+    margin: 10px;
+    height: 25px;
+    padding-left: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #121212;
+    outline: none;
+}
+
+.input-text-titulo {
     min-width: 200px;
     margin: 10px;
     height: 25px;
     padding-left: 10px;
-    border-radius: 10px;
     border-style: solid;
     border-width: 1px;
     border-color: #121212;
     outline: none;
+    background-color: #3498DB;
+    color: #fff;
 }
 
 .input-btn {

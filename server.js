@@ -4,7 +4,7 @@ const app = express()
 
 const ObjectId = require('mongodb').ObjectId
 const MongoClient = require('mongodb').MongoClient
-const uri = "mongodb+srv://Felipe:12345lipejs@crud-nodejs.l0rwo.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://Felipe:12345lipejsz@crud-nodejs.l0rwo.mongodb.net/?retryWrites=true&w=majority";
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use('/css', express.static('css'));
