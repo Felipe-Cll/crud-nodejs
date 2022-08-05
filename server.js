@@ -27,7 +27,7 @@ app.route('/')
 })
 
 .post((req, res) => {
-    db.collection('data').save(req.body, (err, result) => {
+    db.collection('data').insertOne(req.body, (err, result) => {
         if (err) return console.log(err)
 
         console.log('Salvo no banco de dados')
