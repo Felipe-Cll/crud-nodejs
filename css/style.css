@@ -29,24 +29,39 @@ h2 {
     
 }
 
-#table {
-    margin: 0 auto;
-    margin-top: 5vh;
-    width: 90vw;
+#tableEfeito {
     border-radius: 10px;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-color: #262626;
+    font-size: 25px;
+    margin: 20px;
+    padding: 30px;
+    color: #000;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 table {
     border-collapse: collapse;
 }
 
+#tableInterno {
+    width: 100%;
+}
+
 .input-text {
     margin: 10px;
     height: 25px;
     padding-left: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #121212;
+    outline: none;
+}
+
+.input-text-B {
+    text-align: center;
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
@@ -68,21 +83,27 @@ table {
 }
 
 .input-btn {
+    width: 100px;
     flex: 1;
-    margin: 5px;
+    margin: 10px;
     height: 30px;
     border-radius: 10px;
     border-style: solid;
-    border-width: 1px;
-    border-color: #262626;
+    border-width: 2px;
+    color: #fff;
+    background-color: #3498DB;
     cursor: pointer;
     transition: 0.3s all ease;
 }
 
-.input-btn:hover {
+.input-btn a {
     color: #fff;
+    text-decoration: none;
+}
+
+.input-btn:hover {
     background-color: #121212;
-    border-color: #121212;
+    color: #fff;
 }
 
 .editando {
@@ -92,7 +113,7 @@ table {
 }
 
 .editando:hover {
-    color: rgb(1, 88, 1);
+    color: rgb(3, 59, 3);
 }
 
 .deletando {

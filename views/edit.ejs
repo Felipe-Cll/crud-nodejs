@@ -11,12 +11,13 @@
     <div id="titulo">
         <h1>Candidatos</h1>
     </div>
-    <section id="table">
+    <section id="tableEfeito">
     <h2>Editar Registro</h2>
     <% data.forEach(function(details) { %>
         <form action="/edit/<%= details._id %>" method="POST">
             <input class="input-text" type="text" value="<%= details.name %>" name="name">
-            <input class="input-text" type="text" value="<%= details.surname %>" name="surname">
+            <input class="input-text" type="text" value="<%= details.email %>" name="email">
+            <input class="input-text" type="text" value="<%= details.tel %>" name="tel">
             <br />
             <button class="input-btn"><a href="/show">Todos</a></button>
             <button class="input-btn" type="submit">Editar</button>

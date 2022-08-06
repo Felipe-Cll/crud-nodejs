@@ -56,12 +56,14 @@ app.route('/edit/:id')
 .post((req, res) => {
     var id = req.params.id
     var name = req.body.name
-    var surname = req.body.surname
+    var email = req.body.email
+    var tel = req.body.tel
 
     db.collection('data').updateOne({_id: ObjectId(id)}, {
         $set: {
             name: name,
-            surname: surname
+            email: email,
+            tel: tel
         }
     }, (err, result) => {
         if (err) return res.send(err)
