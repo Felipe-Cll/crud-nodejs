@@ -4,7 +4,7 @@
 </p>
 
 ## :books: Informações
-CRUD significa Create, Read, Update and Delete. Neste projeto desenvolvi o CRUD em nodejs utilizando também o framework Express e o banco de dados NoSQL (Mongodb).
+CRUD significa Create, Read, Update and Delete. Neste projeto desenvolvi o CRUD em Nodejs utilizando também o framework Express e o banco de dados NoSQL (Mongodb).
 
 ## :pushpin: Tecnologias
 <ul>
