@@ -15,4 +15,4 @@ CRUD significa Create, Read, Update and Delete. Neste projeto desenvolvi o CRUD 
 </ul>
 
 ## :balance_scale: Licença
-Consulte o arquivo <a href="https://github.com/Felipe-Cll/crud-nodejs/blob/master/LICENS" target="_blank">LICENSE</a> para obter mais detalhes.
+Consulte o arquivo <a href="https://github.com/Felipe-Cll/crud-nodejs/blob/master/LICENSE" target="_blank">LICENSE</a> para obter mais detalhes.
