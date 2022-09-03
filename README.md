@@ -13,3 +13,6 @@ CRUD significa Create, Read, Update and Delete. Neste projeto desenvolvi o CRUD 
   <li><a href="https://ejs.co/">EJS</a></li>
   <li><a href="https://www.mongodb.com/pt-br/what-is-mongodb">Mongodb</a></li>
 </ul>
+
+## :balance_scale: Licença
+Consulte o arquivo <a href="https://github.com/Felipe-Cll/crud-nodejs/blob/master/LICENS" target="_blank">LICENSE</a> para obter mais detalhes.
